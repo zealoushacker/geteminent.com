@@ -1,0 +1,7 @@
+Premise: People are valued by others for whom they are
+Hypothesis: People want to indicate why they value each other
+Solution: A value discovery platform
+
+This is in answer to social networks like facebook, where connections are implicit - where the value offered by one's friends is not explicitly stated; where your friend list is full of people, most of whom one had only met once or twice in real life - where the noise of your so called "friends" drowns out the value offered by those whom are truly valuable.
+
+geteminent.com
