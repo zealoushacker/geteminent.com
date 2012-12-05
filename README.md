@@ -4,14 +4,19 @@ geteminent.com
 = Basic mechanics
 Upvote a friend for a certain area of expertise
 
-Voter inputs Friend's email, twitter (must log in), or facebook (must log in)
+Voter inputs Friend's email, twitter (must log in), facebook (must log in), github (must log in)
 Voter inputs Friend's area of expertise
 
 RESULT: 
 Voter upvotes Friend within that area of expertise
 Friend gets a unique profile url
+Friend gets notified of upvote
 Friend gets notification with unique profile url
 Voter gets a unique profile url
+Voter tweets/notifies his own network of his upvote for his friend
+
+Profiles show whom voted for whom
+Facebook/other soc. network data is pulled in
 
 Profiles show areas of expertise and eminence within that area
 One may share their profile with their email lists, fb, and twitter
