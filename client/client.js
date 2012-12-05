@@ -1,6 +1,7 @@
 if (Meteor.isClient) {
+  /*
   Template.hello.greeting = function () {
-    return "Welcome to geteminent.";
+    return "Welcome to geteminent";
   };
 
   Template.hello.events({
@@ -10,4 +11,5 @@ if (Meteor.isClient) {
         console.log("You pressed the button");
     }
   });
+  */
 }

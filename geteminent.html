@@ -4,12 +4,22 @@
 
 <body>
   <div class="container">
-    {{> hello}}
+    <form action="upvote" method="POST">
+      {{> friend}} is an excellent {{> skill}}
+      {{> footer}}
+    </form> 
   </div>
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="friend">
+  <input type="text"></input>
+</template>
+
+<template name="skill">
+  <input type="text"></input>
+</template>
+
+<template name="footer">
+  <p>geteminent.com helps you and your friends find great work, collaborate on projects, and meet others in their areas of expertise.</p>
+  <input type="submit" value="Upvote"></input>
 </template>
