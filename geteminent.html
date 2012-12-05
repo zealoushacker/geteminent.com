@@ -1,25 +1,35 @@
 <head>
-  <title>geteminent</title>
+  <title>Get Eminent!</title>
 </head>
 
 <body>
   <div class="container">
-    <form action="upvote" method="POST">
-      {{> friend}} is an excellent {{> skill}}
-      {{> footer}}
-    </form> 
+    <div class="hero-unit">
+      <h1>Get Eminent!</h1>
+      <p class="lead">geteminent.com helps you and your friends find great work, collaborate on projects, and meet others in their areas of expertise.</p>
+    </div>
+    <div class="well well-large">
+      <form action="upvote" method="POST" class="form-inline">
+        <div class="controls controls-row">
+          <p>Step 1: Start by upvoting a friend!</p>
+          {{> friend}} <span class="no-wrap">is an excellent</span> {{> skill}}
+          <a class="btn btn-success"><i class="icon-thumbs-up"></i></a>
+        </div>
+      </form> 
+    </div>
   </div>
 </body>
 
 <template name="friend">
-  <input type="text"></input>
+  <div class="input-prepend">
+    <span class="add-on"><i class="icon-user"></i></span>
+    <input type="text"></input>
+  </div>
 </template>
 
 <template name="skill">
-  <input type="text"></input>
-</template>
-
-<template name="footer">
-  <p>geteminent.com helps you and your friends find great work, collaborate on projects, and meet others in their areas of expertise.</p>
-  <input type="submit" value="Upvote"></input>
+  <div class="input-prepend">
+    <span class="add-on"><i class="icon-star"></i></span>
+    <input type="text"></input>
+  </div>
 </template>
