@@ -5,7 +5,7 @@ Basic mechanics
 ===============
 Upvote a friend for a certain area of expertise
 
-Voter inputs Friend's email, twitter (must log in), facebook (must log in), github (must log in)
+Voter inputs Friend's email, linkedin (must log in), twitter (must log in), facebook (must log in), github (must log in)
 Voter inputs Friend's area of expertise
 
 RESULT: 
