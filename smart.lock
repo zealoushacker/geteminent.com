@@ -1,0 +1,22 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "067113a37dd4e7824db1a16d5f7a90c3739eed9c"
+  },
+  "dependencies": {
+    "basePackages": {
+      "bootstrap-font-awesome": {
+        "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
+        "branch": "master"
+      }
+    },
+    "packages": {
+      "bootstrap-font-awesome": {
+        "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
+        "branch": "master",
+        "commit": "b5b377b754f3bd8d8f4d04756b98b34accf5ce62"
+      }
+    }
+  }
+}
