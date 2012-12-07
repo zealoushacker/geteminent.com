@@ -15,7 +15,7 @@
       "bootstrap-font-awesome": {
         "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
         "branch": "master",
-        "commit": "b5b377b754f3bd8d8f4d04756b98b34accf5ce62"
+        "commit": "6855e97f9a1b28a941ebee530280db672d920dcd"
       }
     }
   }
