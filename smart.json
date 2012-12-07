@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "bootstrap-font-awesome": {
+      "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git"
+    }
+  }
+}
