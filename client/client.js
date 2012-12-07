@@ -1,8 +1,11 @@
+///////////////////////////////////////////////////////////////////////////////
+// Friend selector 
 Template.friend.events({
-  'click input' : function () {
-    // template data, if any, is available in 'this'
-    if (typeof console !== 'undefined') {
-      console.log("Friend template input!");
-    }
+  'click' : function () {
+    Session.set("upvotingFriend", true);
   }
 });
+
+Template.friend.upvotingFriend = function () {
+  return Session.get("upvotingFriend");
+};
