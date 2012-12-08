@@ -9,3 +9,6 @@ coffeescript
 accounts-base
 bootstrap-font-awesome
 less
+accounts-password
+accounts-ui
+accounts-twitter
