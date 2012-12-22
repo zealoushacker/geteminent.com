@@ -1,7 +1,7 @@
 {
   "meteor": {
-    "git": "git://github.com/alexnotov/meteor.git",
-    "branch": "accounts-linkedin"
+    "path": "/Users/alex/Documents/work/personal/meteor",
+    "branch": "factor_out_providers_from_accounts_ui_unstyled"
   },
   "packages": {
     "bootstrap-font-awesome": {

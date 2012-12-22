@@ -1,8 +1,6 @@
 {
   "meteor": {
-    "git": "git://github.com/alexnotov/meteor.git",
-    "branch": "accounts-linkedin",
-    "commit": "b098944d442e152a3eed4648a6a3b4eaa47d8383"
+    "path": "/Users/alex/Documents/work/personal/meteor"
   },
   "dependencies": {
     "basePackages": {
