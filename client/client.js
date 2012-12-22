@@ -2,7 +2,6 @@
 // Friend selector 
 
 Template.friendSource.sources = [
-  { source: "linkedin", icon: "icon-linkedin" },
   { source: "facebook", icon: "icon-facebook" },
   { source: "twitter", icon: "icon-twitter" },
   { source: "google", icon: "icon-google-plus" },
