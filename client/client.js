@@ -25,6 +25,7 @@ Template.friend.eventObject = function() {
   var events = {
     'click .email, click input' : function (event, template) {
       Session.set("friend.source", "email");
+      $(".friend-select input").focus();
     } 
   };
 
