@@ -16,8 +16,12 @@ Template.friendSource.clickHandler = function(source) {
   o['click .' + source.source] =  function (event, template) {
     Session.set("friend.source", source.source);
     if (source.source === "facebook") {
-      Meteor.loginWithFacebook({}, function (err) {
-        Session.set('errorMessage', err.reason || 'Unknown error');
+      Meteor.loginWithFacebook({
+        requestPermissions: ['publish_actions']
+      }, function (err) {
+        if (err) {
+          Session.set('errorMessage', err.reason || 'Unknown error');
+        }
       });
     }
   };
