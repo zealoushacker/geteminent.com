@@ -3,7 +3,6 @@
 
 Template.friendSource.sources = [
   { source: "facebook", icon: "icon-facebook" },
-  { source: "twitter", icon: "icon-twitter" },
   { source: "google", icon: "icon-google-plus" },
   { source: "email", icon: "icon-envelope" }
 ];
