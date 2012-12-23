@@ -9,3 +9,5 @@ coffeescript
 accounts-base
 bootstrap-font-awesome
 less
+accounts-facebook
+accounts-ui

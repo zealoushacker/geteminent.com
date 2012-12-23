@@ -14,8 +14,13 @@ Template.friendSource.selected = function(source) {
 Template.friendSource.clickHandler = function(source) {
   var o = {};
   o['click .' + source.source] =  function (event, template) {
-    Session.set("friend.source", source.source)
-  }
+    Session.set("friend.source", source.source);
+    if (source.source === "facebook") {
+      Meteor.loginWithFacebook({}, function (err) {
+        Session.set('errorMessage', err.reason || 'Unknown error');
+      });
+    }
+  };
 
   return o;
 };
@@ -25,7 +30,7 @@ Template.friend.eventObject = function() {
     'click .email, click input' : function (event, template) {
       Session.set("friend.source", "email");
       $(".friend-select input").focus();
-    } 
+    }
   };
 
   _.each(Template.friendSource.sources, function(i) {

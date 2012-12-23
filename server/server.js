@@ -1,3 +1,7 @@
 Meteor.startup(function () {
-  // code to run on server at startup
+  Accounts.loginServiceConfiguration.insert({
+    service: "facebook",
+    appId: process.env.FACEBOOK_APP_ID,
+    appSecret: process.env.FACEBOOK_APP_SECRET
+  });
 });
