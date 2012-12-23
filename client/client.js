@@ -15,6 +15,7 @@ Template.friendSource.clickHandler = function(source) {
   var o = {};
   o['click .' + source.source] =  function (event, template) {
     Session.set("friend.source", source.source);
+
     if (source.source === "facebook") {
       Meteor.loginWithFacebook({
         requestPermissions: ['publish_actions']
@@ -24,6 +25,8 @@ Template.friendSource.clickHandler = function(source) {
         }
       });
     }
+
+    Session.set("friend.source." + source + ".invite", true);
   };
 
   return o;
