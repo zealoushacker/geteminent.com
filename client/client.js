@@ -1,22 +1,40 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Friend selector 
 
-Template.friendSource.sources = [
-  { source: "facebook", icon: "icon-facebook" },
-  { source: "google", icon: "icon-google-plus" },
-  { source: "email", icon: "icon-envelope" }
-];
+Template.friendSource.helpers({
 
-Template.friendSource.selected = function(source) {
-  return Template.friend.source() === source ? "selected" : "";
-};
+  sources: function () {
+    return [
+      { name: "facebook", icon: "icon-facebook" },
+      { name: "google", icon: "icon-google-plus" },
+      { name: "email", icon: "icon-envelope" }
+    ];
+  }
 
-Template.friendSource.clickHandler = function(source) {
-  var o = {};
-  o['click .' + source.source] =  function (event, template) {
-    Session.set("friend.source", source.source);
+}); 
 
-    if (source.source === "facebook") {
+Template.friendSource.events({
+
+  "click input": function (e, tmpl) {
+    Session.set("friend.source", "email");
+  }
+
+});
+
+Template.source.helpers({
+
+  selected: function () {
+    return Session.equals("friend.source", this.name) ? "selected" : "";
+  }
+
+});
+
+Template.source.events({
+
+  "click span": function (e, tmpl) {
+    var source = this.name;
+
+    if (source === "facebook") {
       Meteor.loginWithFacebook({
         requestPermissions: ['publish_actions']
       }, function (err) {
@@ -26,28 +44,10 @@ Template.friendSource.clickHandler = function(source) {
       });
     }
 
-    Session.set("friend.source." + source + ".invite", true);
-  };
+    Session.set("friend.source", source); 
+  }, 
+  "click .email": function (e, tmpl) {
+    $(".friend-select input").focus();
+  }
 
-  return o;
-};
-
-Template.friend.eventObject = function() {
-  var events = {
-    'click .email, click input' : function (event, template) {
-      Session.set("friend.source", "email");
-      $(".friend-select input").focus();
-    }
-  };
-
-  _.each(Template.friendSource.sources, function(i) {
-    _.extend(events, Template.friendSource.clickHandler(i));
-  });
-  return events;
-};
-
-Template.friend.events(Template.friend.eventObject());
-
-Template.friend.source = function () {
-  return Session.get("friend.source");
-};
+});

@@ -26,7 +26,6 @@
   <h4>Step 1: Start by upvoting a friend!</h4>
   <div class="friend-select input-prepend">
     {{> friendSource }}
-    <input type="text">
   </div>
   <span class="help-block">Pick a friend from a social network or enter
   an email</span>
@@ -34,8 +33,13 @@
 
 <template name="friendSource">
   {{#each sources}}
-    <span class="add-on {{source}} {{selected source}}"><i class="{{icon}}"></i></span>
+    {{> source}}
   {{/each}}
+  <input type="text">
+</template>
+
+<template name="source">
+  <span class="add-on {{name}} {{selected name}}"><i class="{{icon}}"></i></span>
 </template>
 
 <template name="skill">
