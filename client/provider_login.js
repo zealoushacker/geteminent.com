@@ -1,12 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Login with facebook 
+// Provider login
 
 Meteor.autorun(function (handle) {
   var source = Session.get("friend.source");
 
-  // if not logged in and facebook is indicated
-  if (!Meteor.user() && source === "facebook") {
-    // log in with facebook
+  // if logged in, stop doing everything else
+  if (Meteor.user()) { return; }
+
+  // if attempting to login with facebook
+  if (source === "facebook") {
     Meteor.loginWithFacebook({
       requestPermissions: ['publish_actions']
     }, function (err) {
