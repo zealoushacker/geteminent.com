@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Friend selector 
+// Friend source chooser 
 
 Template.friendSource.helpers({
 
@@ -34,18 +34,9 @@ Template.source.events({
   "click span": function (e, tmpl) {
     var source = this.name;
 
-    if (source === "facebook") {
-      Meteor.loginWithFacebook({
-        requestPermissions: ['publish_actions']
-      }, function (err) {
-        if (err) {
-          Session.set('errorMessage', err.reason || 'Unknown error');
-        }
-      });
-    }
-
     Session.set("friend.source", source); 
   }, 
+
   "click .email": function (e, tmpl) {
     $(".friend-select input").focus();
   }
