@@ -4,7 +4,7 @@
 Meteor.autorun(function (handle) {
   var source = Session.get("friend.source");
 
-  // if logged in, stop doing everything else
+  // if logged in, don't do anything else 
   if (Meteor.user()) { return; }
 
   // if attempting to login with facebook
