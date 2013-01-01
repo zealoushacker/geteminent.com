@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Facebook friends getter for a user id
 Meteor.methods({
-  facebookFriends: function(userId, offset) {
+
+  facebookFriends: function (userId, offset) {
     var user = Meteor.users.findOne(
           userId, {fields: {'services.facebook.accessToken': 1}}
         ),
@@ -20,4 +21,5 @@ Meteor.methods({
 
     return result.data;
   }
+
 });

@@ -52,3 +52,10 @@ Template.facebookFriendSelector.helpers({
 
 ///////////////////////////////////////////////////////////////////////////////
 // Facebook friend
+
+Template.facebookFriend.helpers({
+  photoUri: function() {
+    var friend = this;
+    return "https://graph.facebook.com/" + friend.id + "/picture";
+  }
+});
