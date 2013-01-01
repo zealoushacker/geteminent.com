@@ -37,14 +37,6 @@ Template.facebookFriendSelector.helpers({
     );
 
     return Session.get("facebook.friends");
-  },
-
-  previousPage: function() {
-    return Session.get("facebook.friends.paging.prevous");
-  },
-
-  nextPage: function() {
-    return Session.get("facebook.friends.paging.next");
   }
 
 });
@@ -57,5 +49,19 @@ Template.facebookFriend.helpers({
   photoUri: function() {
     var friend = this;
     return "https://graph.facebook.com/" + friend.id + "/picture";
+  }
+});
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Facebook friend pager
+
+Template.facebookFriendPager.helpers({
+  previousPage: function() {
+    return Session.get("facebook.friends.paging.prevous");
+  },
+
+  nextPage: function() {
+    return Session.get("facebook.friends.paging.next");
   }
 });
