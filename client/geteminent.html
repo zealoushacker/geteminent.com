@@ -66,11 +66,9 @@
     </div>
     <div class="modal-body">
       {{> facebookFriendPager}}
-      <ul class="media-list">
-      {{#each friends}}
-        {{> facebookFriend}}
-      {{/each}}
-      </ul>
+
+      {{> facebookFriends}}
+
       {{> facebookFriendPager}}
     </div>
     <div class="modal-footer">
@@ -81,14 +79,22 @@
 </template>
 
 <template name="facebookFriendPager">
-    <ul class="pager">
-      <li class="previous">
-        <a href="{{previousPage}}">&larr; Previous</a>
-      </li>
-      <li class="next">
-        <a href="{{nextPage}}">Next &rarr;</a>
-      </li>
-    </ul>
+  <ul class="pager">
+    <li class="previous">
+      <a href="{{previousPage}}">&larr; Previous</a>
+    </li>
+    <li class="next">
+      <a href="{{nextPage}}">Next &rarr;</a>
+    </li>
+  </ul>
+</template>
+
+<template name="facebookFriends">
+  <ul class="media-list">
+    {{#each friends}}
+      {{> facebookFriend}}
+    {{/each}}
+  </ul>
 </template>
 
 <template name="facebookFriend">

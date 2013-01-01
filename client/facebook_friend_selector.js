@@ -1,6 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Facebook friend selector activation
 
+Meteor.startup(function () {
+  User.facebookFriends(); 
+});
+
 Meteor.autorun(function (handle) {
   var source = Session.get("friend.source");
 
@@ -23,19 +27,9 @@ Meteor.autorun(function (handle) {
 ///////////////////////////////////////////////////////////////////////////////
 // Facebook friend selector
 
-Template.facebookFriendSelector.helpers({
+Template.facebookFriends.helpers({
 
   friends: function() {
-     Meteor.call(
-      "facebookFriends", 
-      Meteor.userId(),
-      function(error, result) {
-        Session.set("facebook.friends", result.data);
-        Session.set("facebook.friends.paging.next", result.paging.next);
-        Session.set("facebook.friends.paging.previous", result.paging.previous);
-      }
-    );
-
     return Session.get("facebook.friends");
   }
 
@@ -46,10 +40,12 @@ Template.facebookFriendSelector.helpers({
 // Facebook friend
 
 Template.facebookFriend.helpers({
+
   photoUri: function() {
     var friend = this;
     return "https://graph.facebook.com/" + friend.id + "/picture";
   }
+
 });
 
 
@@ -57,6 +53,7 @@ Template.facebookFriend.helpers({
 // Facebook friend pager
 
 Template.facebookFriendPager.helpers({
+
   previousPage: function() {
     return Session.get("facebook.friends.paging.prevous");
   },
@@ -64,4 +61,14 @@ Template.facebookFriendPager.helpers({
   nextPage: function() {
     return Session.get("facebook.friends.paging.next");
   }
+
+});
+
+Template.facebookFriendPager.events({
+
+  "click ul.pager li a" : function (e, tmpl) {
+    e.preventDefault();
+    User.facebookFriends(e.target.href);
+  }
+
 });
