@@ -25,7 +25,7 @@ Meteor.autorun(function (handle) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Facebook friend selector
+// Facebook friends template
 
 Template.facebookFriends.helpers({
 
@@ -55,7 +55,7 @@ Template.facebookFriend.helpers({
 Template.facebookFriendPager.helpers({
 
   previousPage: function() {
-    return Session.get("facebook.friends.paging.prevous");
+    return Session.get("facebook.friends.paging.previous");
   },
 
   nextPage: function() {
