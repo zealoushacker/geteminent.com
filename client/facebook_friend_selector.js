@@ -25,7 +25,7 @@ Meteor.autorun(function (handle) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Facebook friends template
+// Facebook friends list template
 
 Template.facebookFriends.helpers({
 
@@ -37,7 +37,7 @@ Template.facebookFriends.helpers({
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Facebook friend
+// Facebook individual friend
 
 Template.facebookFriend.helpers({
 
