@@ -1,16 +1,15 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Facebook friends getter for a user id
 Meteor.methods({
-
   facebookFriends : function (userId, offset) {
     var user = Meteor.users.findOne(
           userId, {fields: {'services.facebook.accessToken': 1}}
         ),
         accessToken = user.services.facebook.accessToken,
         friendsQuery = function(offset) {
-          return "SELECT uid, name FROM user \
-            WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1 = me()) \
-            ORDER BY name ASC LIMIT 10 OFFSET " + (offset);
+          return "SELECT uid, name FROM user" +
+            " WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1 = me())" +
+            " ORDER BY name ASC LIMIT 10 OFFSET " + (offset);
         },
         uri = "https://api.facebook.com/method/fql.query",
         query,
