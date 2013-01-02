@@ -43,7 +43,7 @@ Template.facebookFriend.helpers({
 
   photoUri: function() {
     var friend = this;
-    return "https://graph.facebook.com/" + friend.id + "/picture";
+    return "https://graph.facebook.com/" + friend.uid + "/picture";
   }
 
 });
@@ -68,7 +68,7 @@ Template.facebookFriendPager.events({
 
   "click ul.pager li a" : function (e, tmpl) {
     e.preventDefault();
-    User.facebookFriends(e.target.href);
+    User.facebookFriends($(e.target).data("offset"));
   }
 
 });
