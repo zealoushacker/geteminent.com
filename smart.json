@@ -1,13 +1,13 @@
 {
   "meteor": {
-    "git" : "git@github.com:zealoushacker/meteor.git"
+    "git" : "git://github.com/zealoushacker/meteor.git"
   },
   "packages": {
     "bootstrap-font-awesome" : {
       "git" : "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git"
     },
     "accounts-linkedin" : {
-      "git" : "git@github.com:zealoushacker/meteor-accounts-linkedin.git"
+      "git" : "git://github.com/zealoushacker/meteor-accounts-linkedin.git"
     }
   }
 }
