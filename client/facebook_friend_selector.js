@@ -20,7 +20,7 @@ Meteor.autorun(function (handle) {
   // it's here so that the context clears itself
   // and so that we can allow user to keep
   // attempting to invite friends from facebook
-  Session.set("friend.source", "");
+  // Session.set("friend.source", "");
 });
 
 

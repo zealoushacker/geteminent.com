@@ -5,6 +5,8 @@ Template.friendSource.helpers({
 
   sources: function () {
     return [
+      { name: "twitter", icon: "icon-twitter" },
+      { name: "linkedin", icon: "icon-linkedin" },
       { name: "facebook", icon: "icon-facebook" },
       { name: "google", icon: "icon-google-plus" },
       { name: "email", icon: "icon-envelope" }

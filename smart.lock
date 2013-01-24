@@ -1,14 +1,15 @@
 {
   "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
-    "branch": "master",
-    "commit": "067113a37dd4e7824db1a16d5f7a90c3739eed9c"
+    "path": "/Users/alex/Documents/work/personal/meteor"
   },
   "dependencies": {
     "basePackages": {
       "bootstrap-font-awesome": {
         "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
         "branch": "master"
+      },
+      "accounts-linkedin": {
+        "path": "/Users/alex/Documents/work/personal/meteor-packages/accounts-linkedin"
       }
     },
     "packages": {
@@ -16,6 +17,9 @@
         "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
         "branch": "master",
         "commit": "bb05a051fdd31a864b04da29c00d3322826f2afa"
+      },
+      "accounts-linkedin": {
+        "path": "/Users/alex/Documents/work/personal/meteor-packages/accounts-linkedin"
       }
     }
   }
