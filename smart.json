@@ -1,13 +1,15 @@
 {
   "meteor": {
-    "path": "/Users/alex/Documents/work/personal/meteor"
+    //"path": "/Users/alex/Documents/work/personal/meteor"
+    "git" : "git@github.com:zealoushacker/meteor.git"
   },
   "packages": {
     "bootstrap-font-awesome" : {
       "git" : "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git"
     },
     "accounts-linkedin" : {
-      "path" : "/Users/alex/Documents/work/personal/meteor-packages/accounts-linkedin"
+      //"path" : "/Users/alex/Documents/work/personal/meteor-packages/accounts-linkedin"
+      "git" : "git@github.com:zealoushacker/meteor-accounts-linkedin.git"
     }
   }
 }
