@@ -4,7 +4,7 @@
   },
   "packages": {
     "bootstrap-font-awesome" : {
-      "git" : "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git"
+      "git" : "git://github.com/zealoushacker/meteor-bootstrap-and-font-awesome.git"
     },
     "accounts-linkedin" : {
       "git" : "git://github.com/zealoushacker/meteor-accounts-linkedin.git"
