@@ -5,7 +5,7 @@
   "dependencies": {
     "basePackages": {
       "bootstrap-font-awesome": {
-        "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
+        "git": "git://github.com/zealoushacker/meteor-bootstrap-and-font-awesome.git",
         "branch": "master"
       },
       "accounts-linkedin": {
@@ -14,7 +14,7 @@
     },
     "packages": {
       "bootstrap-font-awesome": {
-        "git": "git://github.com/alexnotov/meteor-bootstrap-and-font-awesome.git",
+        "git": "git://github.com/zealoushacker/meteor-bootstrap-and-font-awesome.git",
         "branch": "master",
         "commit": "bb05a051fdd31a864b04da29c00d3322826f2afa"
       },
